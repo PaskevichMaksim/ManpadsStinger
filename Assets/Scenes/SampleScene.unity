@@ -1726,6 +1726,7 @@ GameObject:
   - component: {fileID: 452634128}
   - component: {fileID: 452634129}
   - component: {fileID: 452634130}
+  - component: {fileID: 452634131}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -2379,6 +2380,58 @@ MonoBehaviour:
         m_Processors: 
         m_Groups: 
         m_Action: Left Controller Primary Button
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+--- !u!114 &452634131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452634120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc36810485617744bd8f6abdc80d81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightControllerSecondaryButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Controller Secondary Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c4382281-d39f-4152-baf7-83577e6db2f5
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: ee0d7562-52af-4f76-bc02-1a6b17936ecf
+        m_Path: <XRController>{RightHand}/secondaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Controller Secondary Button
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  _leftControllerSecondaryButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Controller Secondary Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 5b9f9716-12d0-4cb6-ba5e-caab81e84596
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: f4c5438c-ef9f-4163-a29d-947d019297ce
+        m_Path: <XRController>{LeftHand}/secondaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Left Controller Secondary Button
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}

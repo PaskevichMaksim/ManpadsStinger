@@ -31,12 +31,12 @@ public class InteractorSwitcher : MonoBehaviour
 
   private void Update()
   {
-    if (_rightControllerPrimaryButton.action.IsPressed())
+    if (_rightControllerPrimaryButton.action.triggered)
     {
       ToggleInteractor(_rightDirectInteractor, _rightRayInteractor);
     }
 
-    if (_leftControllerPrimaryButton.action.IsPressed())
+    if (_leftControllerPrimaryButton.action.triggered)
     {
       ToggleInteractor(_leftDirectInteractor, _leftRayInteractor);
     }
