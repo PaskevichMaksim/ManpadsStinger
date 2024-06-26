@@ -870,6 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionEffect: {fileID: 849772551842596746}
+  _explosionClip: {fileID: 8300000, guid: 170177b2ad0d0b84bb32a2545939789e, type: 3}
 --- !u!1001 &769639116594289970
 PrefabInstance:
   m_ObjectHideFlags: 0

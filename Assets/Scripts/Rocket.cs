@@ -12,8 +12,13 @@ public class Rocket : MonoBehaviour
     private float _lifeTime = 5;
     [SerializeField]
     private ParticleSystem _explosion;
+    [SerializeField]
+    private AudioClip _moveClip;
+    [SerializeField]
+    private AudioClip _explosionClip;
 
     private Rigidbody _rigidbody;
+    private AudioSource _audioSource;
     private Transform _target;
     private Vector3 _direction;
     private bool _isFollowingTarget;
@@ -21,6 +26,7 @@ public class Rocket : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -59,6 +65,8 @@ public class Rocket : MonoBehaviour
         {
             _rigidbody.velocity = _direction * _speed;
         }
+        
+        PlayAudio(_moveClip);
     }
 
     private IEnumerator DestroyAfterLifetime()
@@ -78,6 +86,12 @@ public class Rocket : MonoBehaviour
     private void Explode()
     {
         Instantiate(_explosion, transform.position, transform.rotation);
+        PlayAudio(_explosionClip);
         Destroy(gameObject);
+    }
+
+    private void PlayAudio (AudioClip clip)
+    {
+        _audioSource.PlayOneShot(clip, _rigidbody.velocity.magnitude);
     }
 }
