@@ -12,6 +12,7 @@ namespace Enemies
     private float _waypointTolerance = .1f;
 
     private int _currentWaypointIndex;
+    private bool _isPatrolling = true;
     
     public Transform [] Waypoints
     {
@@ -21,7 +22,10 @@ namespace Enemies
 
     private void Update()
     {
-      Patrol();
+      if (_isPatrolling)
+      {
+        Patrol(); 
+      }
     }
 
     public void Patrol()
@@ -43,6 +47,11 @@ namespace Enemies
       {
         MoveTowards(targetWaypoint);
       }
+    }
+
+    public void StopPatrolling()
+    {
+      _isPatrolling = false;
     }
 
     private void MoveTowards (Transform waypoint)

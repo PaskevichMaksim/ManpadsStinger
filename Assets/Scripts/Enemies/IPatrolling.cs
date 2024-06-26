@@ -7,5 +7,6 @@ namespace Enemies
     public Transform[] Waypoints { get; set; }
 
     public void Patrol();
+    public void StopPatrolling();
   }
 }
