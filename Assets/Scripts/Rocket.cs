@@ -92,6 +92,6 @@ public class Rocket : MonoBehaviour
 
     private void PlayAudio (AudioClip clip)
     {
-        _audioSource.PlayOneShot(clip, _rigidbody.velocity.magnitude);
+        _audioSource.PlayOneShot(clip);
     }
 }
