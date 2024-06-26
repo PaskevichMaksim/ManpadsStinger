@@ -21,11 +21,6 @@ public class TeleportActivator : MonoBehaviour
       _leftRay.gameObject.SetActive(ToggleRay(_leftAction));
    }
 
-   public void ChangeActiveXRController(GameObject controller)
-   {
-     controller.SetActive(!controller.activeSelf);
-   }
-
    private bool ToggleRay (InputActionProperty inputAction)
    {
      return inputAction.action.ReadValue<Vector2>().y > DEVIATION_VALUE;

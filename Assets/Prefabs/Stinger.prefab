@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2695498950972475033}
   - component: {fileID: 967821125878847699}
   - component: {fileID: 3255986669628675491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,22 +503,9 @@ MonoBehaviour:
     type: 3}
   _launchPoint: {fileID: 4616484081829466525}
   _sightPoint: {fileID: 6478097787151764741}
-  _fireController:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Fire Controller
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 75c07a86-c41a-4fa8-9d23-7b40602c8bc0
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
+  _aimIndicator: {fileID: 4745381108149903228}
   _lockOnTime: 2
-  lockOnSound: {fileID: 3255986669628675491}
-  aimIndicator: {fileID: 4745381108149903228}
+  _reloadTime: 3
 --- !u!82 &3255986669628675491
 AudioSource:
   m_ObjectHideFlags: 0
