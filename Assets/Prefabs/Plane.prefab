@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 622231004416901523}
   - component: {fileID: 2305525037289790592}
   - component: {fileID: 8650815870237066296}
-  - component: {fileID: 6605483235355703976}
   m_Layer: 0
   m_Name: MainBody
   m_TagString: Untagged
@@ -84,29 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6605483235355703976
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155654310401587528}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3249345352134993353
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +96,8 @@ GameObject:
   - component: {fileID: 4700024941941602057}
   - component: {fileID: 280786817821430078}
   - component: {fileID: 1737205519620467881}
+  - component: {fileID: 2546642123063804505}
+  - component: {fileID: 6503654210304099005}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -301,6 +279,52 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &2546642123063804505
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249345352134993353}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.1546321
+  m_Height: 8.14
+  m_Direction: 2
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!136 &6503654210304099005
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249345352134993353}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.3646321
+  m_Height: 10.071316
+  m_Direction: 0
+  m_Center: {x: 0.008460045, y: 1.016921, z: 0}
 --- !u!1 &4885846464628122684
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +336,6 @@ GameObject:
   - component: {fileID: 2867112604311158802}
   - component: {fileID: 2658562216448326884}
   - component: {fileID: 8875826338932578784}
-  - component: {fileID: 8658957774984041861}
   m_Layer: 0
   m_Name: Wings
   m_TagString: Untagged
@@ -385,29 +408,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8658957774984041861
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4885846464628122684}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8208167538380119034
 GameObject:
   m_ObjectHideFlags: 0
