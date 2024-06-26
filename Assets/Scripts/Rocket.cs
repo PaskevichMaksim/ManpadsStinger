@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using Enemies;
 using UnityEngine;
 
@@ -8,6 +8,8 @@ public class Rocket : MonoBehaviour
     private float _speed = 50;
     [SerializeField]
     private float _rotationSpeed = 100;
+    [SerializeField]
+    private float _lifeTime = 5;
     [SerializeField]
     private ParticleSystem _explosion;
 
@@ -19,6 +21,11 @@ public class Rocket : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(DestroyAfterLifetime());
     }
 
     public void Initialize (Transform target)
@@ -54,6 +61,12 @@ public class Rocket : MonoBehaviour
         }
     }
 
+    private IEnumerator DestroyAfterLifetime()
+    {
+        yield return new WaitForSeconds(_lifeTime);
+        Explode();
+    }
+    
     private void OnCollisionEnter (Collision other)
     {
         var target = other.gameObject.GetComponent<ITarget>();
@@ -64,7 +77,7 @@ public class Rocket : MonoBehaviour
 
     private void Explode()
     {
-        _explosion.Play();
+        Instantiate(_explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

@@ -4,7 +4,7 @@ namespace Enemies
     public class FlyingTarget : MonoBehaviour, ITarget
     {
         [SerializeField]
-        private GameObject _explosionEffect;
+        private ParticleSystem _explosionEffect;
     
         private Rigidbody _rigidbody;
         private IPatrolling _patrollingBehaviour;
@@ -20,7 +20,7 @@ namespace Enemies
         {
             if (_explosionEffect)
             {
-                Instantiate(_explosionEffect, transform.position, transform.rotation);
+               _explosionEffect.Play();
             }
 
             _patrollingBehaviour?.StopPatrolling();
